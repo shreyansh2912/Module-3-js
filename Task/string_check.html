@@ -9,13 +9,13 @@
     <h1>Check Your Number In Console</h1>
 
     <script>
-        let num = String(prompt('Enter Value'));
-        
-        document.write(num);
-        // document.write(typeof num);
-        // document.write(num.length);
-        // document.write(num.trim());
-        // document.write();
+        let num = prompt('Enter Value');
+        num = num.trim()
+        console.log("Your Input is"+num)
+        console.log("Type of your data is " + typeof num);
+        console.log("Length of your data " + num.length);
+        console.log();
     </script>
+    
 </body>
 </html>
