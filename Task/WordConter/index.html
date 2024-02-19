@@ -3,13 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Word Counter – Count Words &amp; Improve Writing</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="box">
-        <div class="output"></div>
-        <h1>Word's 10</h1>
+        <div class="heading">
+            <h1>Word Counter</h1>
+            <p>Track word and character count, fix grammar, summarize text, extract keywords and more for any <br> text with this advanced free tool.</p>
+        </div>
+        <div class="display-flex">
+            <div class="inputbox">
+                <textarea name="" id="text" onkeyup="data()" cols="75" rows="9" placeholder="Type or paste your text here"></textarea><br><br>
+            </div>
+            <div class="numbers">
+                <div class="row">
+                    <div class="words w">
+                        <h2 id="words">0</h2>
+                        Words
+                    </div>
+                    <hr class="hr">
+                    <div class="Characters w">
+                        <h2 id="char">0</h2>
+                        Characters
+                    </div>
+                    <hr class="hr">
+                    <div class="Char_space w">
+                        <h2  id="char_space">0</h2>
+                        Characters without space
+                    </div>
+                </div>
+                <hr>    
+                <div class="row">
+                    <div class="Syllables w">
+                        <h2>0</h2>
+                        Syllables
+                    </div>
+                    <hr class="hr">
+                    <div class="Sentences w">
+                        <h2 id="sentence">0</h2>
+                        Sentences
+                    </div>
+                    <hr class="hr">
+                    <div class="Paragraphs w">
+                        <h2>0</h2>
+                        Paragraphs
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class=" w">
+                        <h2 id="read">0</h2>
+                        Reading time
+                    </div>
+                    <hr class="hr">
+                    <div class=" w">
+                        <h2>0</h2>
+                        Speaking time
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
