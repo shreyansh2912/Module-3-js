@@ -28,5 +28,11 @@ function data() {
     document.getElementById("read").innerHTML = Reading_time;
 
 
-    let speaking = words/2.5
+    let speaking = words/4;
+    let min2 = (words/4)/59;
+    if (parseInt(speaking )==59) {
+        speaking = 0;
+    }
+    // console.log(speaking);
+    let speaking_time = `${parseInt(min2)}`
 }
