@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello,</h1>
+     <div class="id" id="first"></div>
+     <div class="ClassName" id="second">0</div>
+     <div class="Name"></div>
+    <input type="text" name="input" value="h">
+
+    <script>
+        
+        console.log(document.getElementById('first').innerText = "id");
+        let clas = document.getElementsByClassName('ClassName').innerText = "Hello";
+        console.log(clas);
+        document.getElementById('second').innerText = "Hello";
+        // document.getElementsByName('input').value = "g";
+        console.log(document.getElementsByName("input").value);
+        let input = document.getElementsByTagName("h1").value
+        // console.log(input);
+        let query = document.querySelector(".ClassName").innerHTML
+        console.log(query);
+    </script>
+</body>
+</html>
