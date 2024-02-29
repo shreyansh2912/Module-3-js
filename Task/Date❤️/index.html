@@ -16,14 +16,37 @@
 <body>
     <script>
        let name = prompt("Helllo,What is your name?")
+
        alert(`${name} What a beutiful name`)
-       let adult = confirm(`${name} Are you 18+?`)
-       if (adult == true) {
-            alert
-       }
-       else{
-            alert("Your too small")
-       }
+
+       repeat();
+       function repeat() {
+           let adult = prompt(`${name} Are you 18+?`)
+        
+           if(adult = "yes"  ){
+               let date = prompt("Which type of date you love to come? \r 1 for Candle light \r 2 for Movie \r 3 for Coffee")
+               alert("Nice Choice");
+               switch (date) {
+                case "1":
+                    break;
+                case "2":
+                    prompt("Which movie you love to watch?")
+                    break;
+                case "3":
+                    break;
+               
+                default:
+                    break;
+               }
+            }
+            else if(adult = "no" ){
+                alert("Your too small")
+            }
+            else {
+                alert("Enter vaild Answer ")
+                repeat();
+            }
+        }
     </script>
 </body>
 </html>
