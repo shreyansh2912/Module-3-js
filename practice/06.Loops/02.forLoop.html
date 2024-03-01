@@ -7,6 +7,33 @@
 </head>
 <body>
     <h1>For Loop</h1>
-    <p></p>
+    <p>Check Console</p>
+
+    <script>
+        //1. for each 
+        let array = [1,2,3,4,5]
+        array.forEach(element => {
+            console.log(element);
+        });
+
+        //2. for In
+        let object ={
+            "name" : "Shreyansh",
+            "email" : "shre@gmail.com",
+            "phone" : "236544523132"
+        }
+
+        for (const key in object) {
+           console.log(key);
+           console.log(object[key]);
+        }
+
+        //3. for of 
+        let arr2 = [1,2,3,4,5]
+
+        for (const iterator of arr2) {
+            console.log(iterator);
+        }
+    </script>
 </body>
 </html>
