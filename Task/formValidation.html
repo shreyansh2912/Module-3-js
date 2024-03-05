@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="username" placeholder="Username" ><span id="uname"></span><br>
+    <input type="email" id="email_id" placeholder="email"><span id="email"></span><br>
+    <input type="number" id="number" placeholder="Phone no."><span id="phone"></span><br>
+    <input type="password" id="password" placeholder="password"><span id="pass"></span><br>
+    <button type="submit" onclick="validation()">submit</button>
+
+    <script>
+        function validation() {
+            let username = document.getElementById('username');
+            let email = document.getElementById('email_id');
+            let phone = document.getElementById('number');
+            let password = document.getElementById('password');
+
+            document.querySelector('span').style.color = "red";
+
+            if (username.value == "") {
+                document.getElementById("uname").innerText = "please enter username";
+            }
+            if (email.value == "") {
+                document.getElementById("email").innerText = "Empty";
+            }
+            if (phone.value == "") {
+                document.getElementById("phone").innerText = "Empty";
+            }
+            if (password.value == "") {
+                document.getElementById("pass").innerText = "Empty";
+            }
+            
+        }
+        // function validation2(){
+        //     let username = document.getElementById('username');
+            
+        // }
+    </script>
+</body>
+</html>
