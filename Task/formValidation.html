@@ -7,39 +7,43 @@
 </head>
 <body>
 
-    <input type="text" id="username" placeholder="Username" ><span id="uname"></span><br>
-    <input type="email" id="email_id" placeholder="email"><span id="email"></span><br>
-    <input type="number" id="number" placeholder="Phone no."><span id="phone"></span><br>
-    <input type="password" id="password" placeholder="password"><span id="pass"></span><br>
-    <button type="submit" onclick="validation()">submit</button>
+    <form action="" method="post">
+        
+        <input type="text" id="username" placeholder="Username" onblur="validation2()"><span name="span" id="uname"></span><br>
+        <input type="email" id="email_id" placeholder="email"><span name="span" id="email"></span><br>
+        <input type="number" id="number" placeholder="Phone no."><span name="span" id="phone"></span><br>
+        <input type="password" id="password" placeholder="password"><span name="span" id="pass"></span><br>
+        <button type="submit" onclick="validation()">submit</button>
+    </form>
 
     <script>
         function validation() {
-            let username = document.getElementById('username');
-            let email = document.getElementById('email_id');
+            let username = document.getElementById('username').value;
+            let email = document.getElementById('email_id').value;
             let phone = document.getElementById('number');
             let password = document.getElementById('password');
 
-            document.querySelector('span').style.color = "red";
+            // document.querySelector('span').style.color = "red";
+             document.querySelector('span').style.color = "red";
 
-            if (username.value == "") {
+            if (username == "") {
                 document.getElementById("uname").innerText = "please enter username";
             }
-            if (email.value == "") {
-                document.getElementById("email").innerText = "Empty";
+            if (email == "") {
+                document.getElementById("email").innerText = "please enter Email";
             }
             if (phone.value == "") {
-                document.getElementById("phone").innerText = "Empty";
+                document.getElementById("phone").innerText = "please enter phone no.";
             }
             if (password.value == "") {
-                document.getElementById("pass").innerText = "Empty";
+                document.getElementById("pass").innerText = "please enter password";
             }
             
         }
-        // function validation2(){
-        //     let username = document.getElementById('username');
-            
-        // }
+        function validation2(){
+            let username = document.getElementById('username');
+        
+        }
     </script>
 </body>
 </html>
