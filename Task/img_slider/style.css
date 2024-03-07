@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.main{
+    margin: 100px auto;
+    width: 500px;
+    height: 400px;
+}
+.slider{
+    border: 1px solid black;
+    width: 500px;
+    height: 350px;
+    /* background: url("img/Place\ Your\ Image\ Here\ \(Double\ Click\ To\ Edit\).png"); */
+}
+.button{
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+}
+img{
+    width: 100%;
+}
