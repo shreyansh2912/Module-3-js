@@ -5,7 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<script src="jquery_file/jquery-3.7.1.min.js"></script>
 <body>
-    
+
+    <div class="hover">
+        <h1>Jquery</h1>
+        <h2 class="h2">Jquery</h2>
+        <h3 id="h3">Jquery</h3>
+    </div>
+    <button class="dark" >Dark mode</button>
+    <script>
+        $(document).ready(function () {
+            let count = 0;
+            $(".dark").click(function () {
+                count++;
+                if (count%2 == 0) {
+                    $("*").css("background-color","white");
+                    $("*").css("color","black");
+                    $(".dark").text("Dark mode off")
+                }
+                else{
+                    $("*").css("background-color","black");
+                    $("*").css("color","white");
+                    $(".dark").prop("id","white");
+                    $(".dark").text("Dark mode On")
+                }
+            })
+            // $("#white").click(function () {
+            //     console.log("in");
+            //     $("*").css("background-color","white");
+            //     $("*").css("color","black");
+            //     $(".white").prop("class","dark");
+            // })
+            $("h1").click(function () {
+                $("h1").text("Element selector");
+            })
+            $(".h2").click(function () {
+                $("h2").text("Class selector");
+            })
+            $("#h3").click(function () {
+                $("#h3").text("Id selector");
+            })
+        })
+    </script>
 </body>
 </html>

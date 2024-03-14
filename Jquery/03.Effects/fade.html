@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="../jquery_file/jquery-3.7.1.min.js"></script>
+<body>
+    <h1>Hide and Seek</h1>
+    <div class="pera">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio earum pariatur maxime illum mollitia unde molestias hic praesentium perferendis totam?</div>
+    <button id="in">Fade In</button>
+    <button id="out">Fade Out</button>
+    <button id="toggle">Fade Toggle</button>
+
+
+    <script>
+          $(document).ready(function (params) {
+            $("#in").click(function () {
+                $(".pera").fadeIn(1000);
+            })
+            $("#out").click(function () {
+                console.log("in");
+                $(".pera").fadeOut(1000);
+            })
+            $("#toggle").click(function () {
+                $(".pera").fadeToggle(4000);
+            })
+          })  
+    </script>
+</body>
+</html>
