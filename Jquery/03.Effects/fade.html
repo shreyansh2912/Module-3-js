@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="../jquery_file/jquery-3.7.1.min.js"></script>
 </head>
-<script src="../jquery_file/jquery-3.7.1.min.js"></script>
+<style>
+    .dark-mode{
+        background-color: black;
+        color: aliceblue;
+    }
+</style>
 <body>
-    <h1>Hide and Seek</h1>
+    <h1>Hide and Seek</h1><button class="button" id="dark">Mode change</button>
     <div class="pera">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio earum pariatur maxime illum mollitia unde molestias hic praesentium perferendis totam?</div>
-    <button id="in">Fade In</button>
-    <button id="out">Fade Out</button>
-    <button id="toggle">Fade Toggle</button>
+    <button class="button" id="in">Fade In</button>
+    <button class="button" id="out">Fade Out</button>
+    <button class="button" id="toggle">Fade Toggle</button>
 
 
     <script>
@@ -26,6 +32,14 @@
             $("#toggle").click(function () {
                 $(".pera").fadeToggle(4000);
             })
+            $("#dark").click(function () {
+            //     $("#dark").toggle(function () {
+            //     $("*").css("color","white");
+            //     $("*").css("background-color","black");
+            //     $(".button").css({"background-color":"lime","color":"black"});
+            // })
+            $('body').toggleClass('dark-mode');
+                })
           })  
     </script>
 </body>
