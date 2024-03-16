@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery_file/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="pera">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe accusamus obcaecati neque non accusantium libero nisi aut praesentium ipsa iste!
+    </div>
+    <input type="text"id="input">
+    <script>
+        $(document).ready(function () {
+            $(".pera").mouseenter(function () {
+                $("body").css({backgroundColor: "lime"});
+            }); 
+            $(".pera").mouseleave(function () {
+                $("body").css({backgroundColor: "white"});
+            }); 
+            $("#input").mouseover(function () {
+                $("body").css({backgroundColor: "pink"});
+            }); 
+            $("#input").mouseout(function () {
+                $("body").css({backgroundColor: "white"});
+            }); 
+        });
+    </script>
+</body>
+</html>
