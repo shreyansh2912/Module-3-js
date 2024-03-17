@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery_file/jquery-3.7.1.min.js"></script>r
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing:border-box;
+    }
+    body{
+        background-color: black;
+        position: relative;
+        height:700px;
+    }
+    .box{
+        margin: auto;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+    }
+    .item{
+        margin:100px auto;
+    }
+    input{
+        border-radius: 20px;
+        padding-left: 5px;
+    }
+    .form{
+        position: absolute;
+        bottom: 0px;
+        left: 90px;
+    }
+    .input{
+        border-radius: 40px;
+        padding: 10px;
+        color: lime;
+        border:10px solid lime ;
+    }
+    .form{
+        border: 5px solid aliceblue;
+        border-radius: 40px;
+    }
+</style>
+<body>
+    <div class="style">
+        <div class="item">
+            <div class="box">
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <div class="input">
+            <span>width:</span>
+            <input type="text" id="width">
+            <span>Height:</span>
+            <input type="text" id="height">
+            <span>Color:</span>
+            <input type="text" id="color">
+            <span>Border Radius:</span>
+            <input type="text" id="radius">
+            <span>Rotate:</span>
+            <input type="number" id="rotate">
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#height").keyup(function () { 
+                let height = $("#height").val();
+                if (height<=450) {   
+                    $(".box").css({"height":height})    
+                    console.log($("#height").val())
+                }
+                else if(height>450){
+                    alert("You height should be under 450px")
+                }
+                else{
+                    $("#height").val(0);
+                    alert("Enter valid Data")
+                }
+            });
+            $("#width").keyup(function () { 
+                let width = $("#width").val();
+                if (width <=450) {
+                    $(".box").css({"width":width})    
+                }else if(height>450){
+                    alert("You height should be under 450px")
+                }
+                else{
+                    $("#width").val(0);
+                    alert("Enter valid Data")
+                }
+            });
+            $("#color").keyup(function () { 
+                let color = $("#color").val();
+                $(".box").css({"background-color":color})    
+                console.log($("#color").val())
+            })
+            $("#radius").keyup(function () { 
+                let radius = $("#radius").val();
+                $(".box").css({"border-radius":radius})    
+                console.log($("#radius").val())
+            })
+            $("#rotate").keydown(function () { 
+                let rotate = $("#rotate").val();
+                if (rotate <=360) {   
+                    $(".box").css({"transform": `rotate(${rotate}deg)`,"transition":"2s"})  
+                }else{
+                    alert("maximum rotation is 360deg")
+                }
+            })
+        })
+    </script>
+</body>
+</html>
