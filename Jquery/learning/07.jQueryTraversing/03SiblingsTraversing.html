@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../jquery_file/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    body
+    <div class="great-grand-parent-box">
+        great-grand-parent-box
+        <div class="grand-parent-box">
+            grand-parent-box
+            <div class="parent-box">
+                <div class="box">box</div>
+                <div class="box">box</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("body").css({textAlign:"center",padding:"10px"})
+
+        $(".box").siblings().css({"border":"5px solid red",padding:"10px"})
+        $(".parent-box").siblings().css({"border":"5px solid lime",padding:"10px"})
+        // $(".grand-parent-box").children().css({"border":"5px solid gold",padding:"10px"})
+        // $(".great-grand-parent-box").childern().css({"border":"5px solid black",padding:"10px"})
+
+
+    });
+</script>
+</html>

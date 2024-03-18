@@ -105,7 +105,7 @@
                 $(".box").css({"border-radius":radius})    
                 console.log($("#radius").val())
             })
-            $("#rotate").keydown(function () { 
+            $("#rotate").keyup(function () { 
                 let rotate = $("#rotate").val();
                 if (rotate <=360) {   
                     $(".box").css({"transform": `rotate(${rotate}deg)`,"transition":"2s"})  
