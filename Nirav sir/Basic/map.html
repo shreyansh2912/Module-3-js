@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr = [1,2,3,4,5]
+        console.log("With map function");
+        arr.map((e)=>{
+            console.log(e*e*Math.PI);
+        });
+        output = []
+        console.log("with For loop")
+        for (let i = 0; i < arr.length; i++) {
+            output.push(arr[i]*arr[i]*Math.PI);            
+        }
+        console.log(output);
+    </script>
+</body>
+</html>

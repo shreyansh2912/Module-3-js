@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        width: 150px;
+    }
+</style>
+<body>
+    <img id="1" src="" alt="img"><br>
+    <img id="2" src="img/OIP.jpg" alt="">
+    <img id="3" src="img/OIP (1).jpg" style="display: block;" alt=""><br>
+
+    <button onclick="get()">Get</button>
+    <button onclick="change()">change</button>
+    <button onclick="alternate()">alternate</button>
+</body>
+    <script>
+        function get() {
+            first = document.getElementById("1")
+            first.src = "img/OIP.jpg";
+        }
+        function change() {
+            sec = document.getElementById("2");
+            console.log(sec);
+            if (sec.src.match("img/OIP.jpg") == "img/OIP.jpg") {
+                sec.src = "img/OIP (1).jpg"
+            }
+            else {
+                sec.src = "img/OIP.jpg"
+                console.log(sec);
+            }
+        }
+        function alternate() {
+            third = document.getElementById("3")
+            if (third.style.display == "block") {
+                third.style.display = "none"
+                console.log(third);
+            }
+            else if(third.style.display == "none"){
+                third.style.display = "block"
+                console.log(third);
+            }else{
+                console.error("error accure");
+            }
+
+        }
+
+    </script>
+</html>

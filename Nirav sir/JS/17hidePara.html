@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="para">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident dolorum tempore deleniti libero praesentium nisi soluta eius ut? Perspiciatis, sint quia. Corrupti, ipsa explicabo sed laudantium consequuntur repellat ducimus maiores.
+    </p>
+
+    <button id="b1">Hide</button>
+
+    <script>
+        p1 = document.getElementById('para')
+        b1 = document.getElementById('b1')
+
+        //p1.addEventListener("dblclick",hidePara)
+
+    //    window.addEventListener('click',hidePara)
+
+    //     function hidePara()
+    //     {
+    //         p1.style.display = "none"
+    //     }
+
+        // p1.addEventListener("dblclick",  function hidePara()
+        // {
+        //     p1.style.display = "none"
+        // })
+
+        // p1.addEventListener("dblclick",  function ()
+        // {
+        //     p1.style.display = "none"
+        // })
+
+        p1.addEventListener("dblclick",  ()=>
+        {
+            p1.style.display = "none"
+        })
+
+       
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Number : </span> <input type="text" id="num"> <br>
+    <button onclick="handle()">Submit</button>
+    <span id="ans"></span>
+    <script>
+        let num = document.getElementById("num");
+        let ans = document.getElementById("ans");
+        
+        const handle = ()=>{
+            let num2 = 0;
+            let cal = num.value;
+            let len2 = cal.length;
+            if(cal.length != 0){
+                for (let i = 0; i <= cal.length; i++) {
+                    if(cal.charAt(i) === cal.charAt(--len2)){
+                        num2++;
+                        if(num2 > cal.length){
+                            document.getElementById("ans").innerText = "It's Palindrome"
+                        }else{
+                            document.getElementById("ans").innerText = "It's not Palindrome"
+                        }
+                    }
+                }
+            }
+            else{
+                alert("Please Enter a number")
+            }
+        }
+
+    </script>
+</body>
+</html>

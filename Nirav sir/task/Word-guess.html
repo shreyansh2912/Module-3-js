@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+        }
+         .box{
+            font-size: 50px;
+            text-align: center;
+         }
+         .input{
+            text-align: center;
+            margin-top:30px ;
+         }
+    </style>
+</head>
+<body>
+    <div class="box" id="box">
+
+    </div>
+    <div class="input">
+        <input type="text" id="input">
+        <button onclick="handleSub()">Submit</button>
+    </div>
+    <script>
+        let string = ["Shreyansh","Apple","Banana","Spiderman","Superman","Ironman","Hello","World","CaptainAmerica"];
+        let str = string[Math.floor(Math.random()*10)]
+        let blank = {};
+        for (let i = 0; i < str.length/2 ; i++) {
+            blank[Math.floor(Math.random()*str.length)] = 1;
+        }
+        let word = "";
+        for (let i = 0; i < str.length; i++) {
+            if(blank.hasOwnProperty(i)){
+                word += "_ ";
+            }
+            else{
+                word+= str[i];
+            }
+        }
+        let box = document.getElementById("box").innerHTML = word;
+        handleSub = ()=>{
+            let tag = document.getElementById("input")
+            if(tag.value.toLocaleLowerCase() == str.toLocaleLowerCase()){
+                alert("Correct!")
+            }else{
+                alert("Oops Wrong!")
+            }
+            location.reload()
+        }
+    </script>
+</body>
+</html>

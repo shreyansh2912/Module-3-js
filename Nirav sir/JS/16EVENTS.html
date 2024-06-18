@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--
+    Window : scroll,resize,load,unload 
+    Form: submit,blur,focus,change
+    Keyboard: press,up,down
+    Mouse: click,dblclick,over,out,enter,leave,move
+
+-->
+
+<h1 id="a" onclick=" changeName()">Hello</h1>
+<p class="b" ondblclick="chgNm()">para</p>
+<h3 class="c" onpointerenter="f1()" onmouseout="fx()">H3</h3>
+<h3 class="d" onmouseenter="f2()" onmouseleave="fy()">h123</h3>
+
+    <script>
+      x =  document.getElementById('a');
+    y=  document.querySelector('.b')
+    z=  document.querySelector('.c')
+    p=  document.querySelector('.d')
+
+      function changeName()
+      {
+        x.innerText ="Saurav"
+      }
+     
+     function chgNm()
+     {
+        y.innerHTML ="<h1>Shreyansh</h1>"
+     }
+
+   function f1()
+   {
+    z.innerHTML ="Jayesh"
+   }
+
+   function fx()
+   {
+    z.innerHTML ="Bharghav"
+   }
+
+   function f2()
+   {
+    p.innerHTML ="Shreya"
+   }
+
+   function fy()
+   {
+    p.innerHTML ="Nandini"
+   }
+    </script>
+</body>
+</html>

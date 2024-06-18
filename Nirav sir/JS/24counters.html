@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="i1"></h1>
+
+    <script>
+
+        x=0;
+        h1 = document.getElementById('i1')
+       
+        function counter()
+        {
+            if(x<=653)
+            {
+                h1.innerHTML = x++
+            }
+            
+        }
+        setInterval("counter()",10)
+        
+        
+
+       
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <input type="text" id="inp1" onkeydown="getText()"> -->
+
+    <!-- <input type="text" id="inp1" onkeypress="getText()"> -->
+
+    <input type="text" id="inp1" onkeyup="getText()">
+    <textarea id="txt" cols="30" rows="10"></textarea>
+    <button onclick=" getText()">Get</button>
+
+    <script>
+        inp1 = document.getElementById('inp1')
+        textArea = document.getElementById('txt')
+        // console.log(textArea)
+
+    //    console.log(inp1.value )
+      function getText()
+      {
+        textArea.innerHTML = inp1.value
+      }
+     
+    </script>
+</body>
+</html>

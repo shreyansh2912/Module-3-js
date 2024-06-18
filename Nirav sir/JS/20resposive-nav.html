@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{margin:0;padding: 0;box-sizing: border-box;}
+        .nav 
+        {
+            background: lightblue;
+            padding: 25px 15px;
+            text-align: center;
+        }
+
+        li 
+        {
+            display: inline;
+            margin-right: 20px;
+        }
+        span 
+        {
+            display: none;
+        }
+       
+        @media(max-width:576px)
+        {
+            ul 
+            {
+                display: none;
+            }
+            li
+            {
+                display: block;
+            }
+            span 
+            {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <span id="bars" onclick="getMenu()"><i class="fa-solid fa-bars"></i></span>
+        <ul id="menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        sp_tag = document.getElementById('bars');
+        ul_tag = document.getElementById('menu');
+
+      function getMenu()
+      { 
+        
+
+         if(ul_tag.style.display =="none")
+         {
+            ul_tag.style.display ="block"
+         }
+
+         else 
+
+         {
+            ul_tag.style.display ="none"
+         }
+      }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="/img/car.jpg" id="drag1" draggable="true" ondragstart="drag(event)" height="200px" width="200px" ondrag="drag(this)"  alt="d">
+    <h1>Helo</h1>
+    <h1>Helo</h1>
+    <h1>Helo</h1>
+    <h1>Helo</h1>
+    <h1>Helo</h1>
+    <div  ondrop="drop(event)"  ondragover="allow(event)" style="border: 1px solid black; height: 200px;width: 200px;">
+    </div>
+
+    <script>
+        function drag(e) {
+            e.dataTransfer.setData("text",e.target.id)
+        }
+        function allow(e) {
+            e.preventDefault();
+        }
+        function drop(e) {
+            e.preventDefault();
+            var data = e.dataTransfer.getData("text");
+            e.target.appendChild(document.getElementById(data))
+        }
+    </script>
+</body>
+</html>

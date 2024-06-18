@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wabPage">
+    <nav>
+        <h1>Music Player</h1>
+        <div class="in">
+            <input type="search" placeholder="Search" id="input">
+            <button onclick="handleSearch()">Search</button>
+        </div>
+        <ol>
+            <li onclick="home()">Home</li>
+            <li>Songs</li>
+            <li>Playlist</li>
+            <li>Contact Us</li>
+            <li>About Us</li>
+        </ol>
+    </nav>
+    <div class="web" id="panel">
+        <div class="panel">
+        </div>
+    </div>
+    <div class="bar">
+        <audio src="" id="audio" controls autoplay >Song</audio>
+        <div class="details" id="details">
+        </div>
+    </div>
+    <div class="cover" id="pagiCover" >
+        <div class="pagi">
+            <button onclick="calc('decre')" id="decre" disabled><</button>
+            <div id="count"></div> 
+            <button onclick="calc('incre')" id="incre">></button>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

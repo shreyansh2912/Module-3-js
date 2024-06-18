@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="test1()">Back</button>
+    <button onclick="test2()">forward</button>
+
+    <script>
+
+        window.addEventListener('mousemove',()=>{
+            confirm('Go back');
+        })
+        document.write(navigator.appCodeName)
+        function test1()
+        {
+            history.back()
+        }
+        function test2()
+        {
+            history.forward()
+        }
+    </script>
+    
+</body>
+</html>

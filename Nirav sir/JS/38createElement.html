@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="d1">
+        <p>para 1</p>
+        <p>para 2</p>
+        <p>para 3</p>
+        <!-- <h4>H4</h4> -->
+    </div>
+
+    <a href="x.html">LINK</a>
+
+    <script>
+      div_tag =   document.getElementById('d1')
+console.log(div_tag)
+
+ h4_tag = document.createElement('h4');//<h4></h4>
+ h4_txt = document.createTextNode("H4 <u>text</u>");//H4 text
+
+ h4_tag.append(h4_txt);//<h4>H$ text</h4>
+
+//  div_tag.append(h4_tag )
+
+div_tag.appendChild(h4_tag)
+
+//ME
+
+
+
+    </script>
+    
+</body>
+</html>

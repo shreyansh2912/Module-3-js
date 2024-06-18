@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="h1">Heading 1</h1>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero mollitia recusandae ab fugit eum culpa ea natus accusamus molestias labore obcaecati, nam suscipit eligendi, nemo voluptatum nulla commodi sapiente. Dolores?</p>
+    <input type="text" id="inp1">
+    <a href="test.html" id="a1">LINK</a>
+    <img src="xyz.jpg" alt="No Image" id="i1">
+
+    <script>
+
+        h1_tag = document.getElementById('h1');
+        
+        p = document.getElementById('p1')
+        inp = document.getElementById('inp1')
+        anc = document.getElementById('a1')
+        img = document.getElementById('i1')
+
+        console.log(h1_tag,inp)
+
+        h1.style.color ="red"
+
+        // h1_tag.innerHTML= "kjhk"
+
+        inp.value =  h1_tag.innerHTML 
+        // p.innerText = "kjhkj"
+        anc.href =p.innerText
+        anc.innerText ="Shreya"
+        anc.href = "Sohil"
+
+        // h1.innerHTML ="kjhj"
+
+        alert(  h1.innerHTML)
+
+        img.alt =  anc.href
+
+    </script>
+
+</body>
+</html>

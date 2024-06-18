@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .test 
+        {
+            animation:key 5;
+        }
+
+        @keyframes key {
+
+            to{transform: rotate(360deg) scale(2);}
+            
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="x" id="x1" name="x2"> h1 </h1>
+    <h1 class="x" id="x1" name="x2"> h2 </h1>
+    <h1 class="x" id="x1" name="x2"> h3 </h1>
+    <h1 class="x" id="x1" name="x2"> h4 </h1>
+
+
+
+    <script>
+
+       x = document.getElementsByClassName('x');
+       y =  document.getElementsByName('x2')
+       z =  document.getElementsByTagName('h1')
+       a = document.querySelectorAll('#x1')
+       b = document.querySelectorAll('.x')
+
+       console.log(x,y,z,a,b)
+
+    //    x[0].style.color ="red"
+    //    x[1].style.color ="red"
+    //    x[2].style.color ="red"
+    //    x[3].style.color ="red"
+
+    for(xyz in x)
+    {
+       if(xyz%2==0)
+       {
+        x[xyz].classList.add("test")
+       }
+       else{
+        x[xyz].style.color ="green"
+       }
+    }
+     
+
+    </script>
+    
+</body>
+</html>

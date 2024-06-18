@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+        <input type="text"  id="ser">
+        <button onclick="handleSer()">Submit</button> <br><br>
+        <table>
+            <thead>
+                <th>Words</th>
+            </thead>
+            <tbody id="table">    
+            </tbody>
+        </table>
+    <script>
+        let arr = ["apple","banana","Pineapple","Graps","Tomato"];
+        let ser = "hello"
+        let data = "";
+        let data2= "";
+        let count = 0;
+        let word = document.getElementById("ser");
+        for (let i = 0; i < arr.length; i++) {
+            data +=`
+                <tr>
+                    <td>${arr[i]}</td>
+                </tr> `
+        }
+        document.getElementById('table').innerHTML = data;
+
+        handleSer = ()=>{
+            if(word.value != ""){
+                for (let i = 0; i < arr.length; i++) {
+                    wor = word.value.toLocaleLowerCase();
+                    let w = arr[i].toLocaleLowerCase();
+                    if(w.search(wor) !== -1){
+                        data2 +=`
+                        <tr>
+                            <td>${arr[i]}</td>
+                        </tr>`  
+                        }
+                        else{
+                            count++;
+                        }
+                    }
+                    
+                    if(count == arr.length){
+                        document.getElementById('table').innerHTML = "";
+                    }else{
+                        document.getElementById('table').innerHTML = data2;
+                        count = 0;
+                    }
+            }else{
+                alert("Enter a value")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // OBJECT LITERAL
+
+        const test = {
+            n:1,
+            'n1':2,
+            "n2":3
+        }
+
+        const students = {
+            fname:"Darshan",
+            lname:"XYZ",  
+            fullname: ()=>{
+                return students.fname + " " +this.lname;
+            }
+            
+        }
+
+        console.log(students.fullname())
+
+    </script>
+    
+</body>
+</html>

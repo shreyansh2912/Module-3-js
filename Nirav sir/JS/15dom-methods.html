@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="h1" onclick=" t()" class="h2" name="xyz">heading 1</h1>
+    <h1 id="h1" class="h2" name="xyz">heading 1</h1>
+    <h1 id="h1" class="h2" name="xyz">heading 1</h1>
+    <h1 id="h1" onclick="t()" class="h2" name="xyz">heading 1</h1>
+
+
+    <script>
+
+        a=   document.querySelectorAll('h1')
+       b=   document.querySelectorAll('.h2')
+       c =   document.querySelectorAll('#h1')
+       d =  document.getElementsByClassName('h2')
+        e = document.getElementsByTagName('h1')
+        f = document.getElementsByName('xyz')
+
+        // console.log(a,b,c,d,e,f)
+
+        console.log(c)
+        // c[0].style.color ="red"
+        // c[1].style.color ="red"
+        // c[2].style.color ="red"
+        // c[3].style.color ="red"
+
+     function t()
+     {
+        for(y=0;y<c.length;y++)
+        {
+            c[y].style.color ="red"
+        }
+     }
+
+    
+
+
+// a = document.getElementById('h1')
+// b = document.querySelector('h1')
+// c = document.querySelector('#h1')
+// d = document.querySelector('.h2')
+
+// console.log(a,b,c,d)
+
+        // to get single element
+
+        // document.getElementById('idName')
+        // document.querySelector('tagName')
+        // document.querySelector('#IdName')
+        // document.querySelector('.ClassName')
+
+         // to get multiple element
+
+        //  document.querySelectorAll('tagName')
+        //  document.querySelectorAll('.ClassName')
+        //  document.querySelectorAll('#idName')
+        //  document.getElementsByClassName('className')
+        //  document.getElementsByTagName('tagName')
+        //  document.getElementsByName('Name')
+      
+
+
+    </script>
+    
+</body>
+</html>

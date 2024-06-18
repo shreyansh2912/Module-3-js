@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            color: aliceblue;
+            margin: 0px;
+        }
+        .btn{
+            float: right;
+            cursor: pointer;
+            height: 50px;
+            width: 120px;
+            background-color:blue;
+            color: aliceblue;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+        .page{
+            font-size: 30px;
+            margin: 5px ;
+        }
+        .nav{
+            height: 60px;
+            background-color:blueviolet;
+            padding: 2px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <button class="btn" id="btn" onclick="handle()">Login</button>
+        <div class="page" id="page"></div>
+    </div>
+
+    <script>
+        let btn = document.getElementById("btn")
+        let page = document.getElementsByClassName("page")
+        let nav = document.getElementsByClassName("nav");
+        let handle = ()=>{
+            if(btn.innerHTML == "Login"){
+                if(username = prompt("Enter UserName")){
+                    if(password = prompt("Enter password")){
+                        if(username == "Shre2912" && password == 123){
+                            alert("Successfully Loged In");
+                            btn.style.backgroundColor = "red";
+                            page[0].innerHTML = "Home Page";
+                            document.body.style.backgroundColor = "black";
+                            btn.innerHTML = "Log Out";
+                        }else{
+                            alert("Username And Password are not matched");
+                        }
+                    }
+                };
+            }else{
+                if(confirm("Do you want to LogOut ?")){
+                    btn.innerHTML = "Login";
+                    page[0].innerHTML = "";
+                    btn.style.backgroundColor = "blue";
+                    document.body.style.backgroundColor = "";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

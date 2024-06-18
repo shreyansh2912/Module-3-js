@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Price: <input type="text" id="p" value="200">
+    <select name="" id="q" onchange="getPrice()">
+        <option hidden>--- Select Quantity --- </option>
+        <option value="1">1</option>
+        <option disabled>2</option>
+        <option value="3">3</option>
+        <option value="40">4</option>
+    </select>
+
+    <b id="res"></b>
+
+    <script>
+       price = document.getElementById('p')
+       quantity =  document.getElementById('q')
+
+       function getPrice()
+       {
+        document.getElementById('res').innerHTML = (price.value*quantity.value)
+       }
+    </script>
+    
+</body>
+</html>

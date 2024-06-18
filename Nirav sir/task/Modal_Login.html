@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            float: right;
+            margin: 10px;
+            width: 90px;
+            height: 35px;
+            font-weight: 750;
+            color: aliceblue;
+            background-color:navy;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .web{
+            position: relative;
+            padding-top: 250px;
+        }
+        .form{
+            width: 350px;
+            border-radius: 20px;
+            background-color: rgba(240, 248, 255, 0.654);
+            position: absolute;
+            top: 100px;
+            left: 450px;
+            z-index: 1;
+        }
+        .line{
+            width: 100%;
+            height: 200px;
+            background-color: black;
+        }
+        h2{
+            font-size: 35px;
+            margin-top: 15px;
+            border-bottom: 4px solid black;
+            color:black;
+            font-family:'Times New Roman', Times, serif;
+        }
+        button{
+            background-color: rgb(0, 102, 255);
+            color: aliceblue;
+            height: 30px;
+            width: 100px;
+            font-size: 15px;
+            border-radius: 8px;
+            border: none;
+        }
+        .cover{
+            margin-top: 20px;
+            padding-top:20px ;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[class*="a"]{
+            width:250px;
+            height: 25px;
+            border: none;
+            border-radius: 6px;
+            padding-left: 10px;
+        }
+        label{
+            font-size: 20px;
+        }
+        .red{
+            color: red;
+            font-size: 13px;
+            margin-bottom: 0px;
+            height: 20px;
+        }
+        nav{
+            background-color:blanchedalmond;
+            width: 100%;
+            height:60px;
+        }
+        body{
+            background-color:indigo; 
+        }
+        .login{
+            display: none;
+        }
+        .ragi{
+            display: none;
+        }
+        .web{
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <nav >
+        <img src="" alt="Logo">
+        <button class="btn " id="login">Sign In</button>
+        <button class="btn " id="ragi" >Sign Up</button>
+    </nav>
+    <div class="modal ragi form">
+            <h2><center> Ragistration</center></h2>
+            <div class="cover ">
+                <form action="" method="get">
+                    
+                <label for="">
+                    <span>Name :</span><br>
+                    <input class="a"  type="text" onkeyup="handle(this,'name','name')"><br>
+                    <span id="name" class="red"></span>
+                </label><br>
+                <label for="">
+                    <span>Email :</span><br>
+                    <input class="a"  type="email" onkeyup="handle(this,'email','email Id')"><br>
+                    <span id="email" class="red"></span>
+                </label><br>
+                <label for="">
+                    <span>Password :</span><br>
+                    <input class="a pass" type="password" id="pass" onclick="()=>{console.log('change')}" onkeyup="handle(this,'password','password')" ><br>
+                    <span id="password" class="red"></span>
+                </label><br>
+                <label for="">
+                    <span>Confirm Password :</span><br>
+                    <input class="a pass" id="c_pass" type="password" onblur="handleCon(this,'con_password')" onkeyup="handle(this,'con_password','confirm password')"><br>
+                    <span id="con_password" class="red"></span>
+                </label><br>   
+                <label for="" style="margin:10px 0px ;">
+                    <input type="checkbox" onclick="handlePass()" ><span style="font-size: 18px; margin: 10px;">Show Password</span>
+                </label>
+                <label for="" >
+                    <center>
+                        <button type="submit" style="margin: 30px;">Submit</button>
+                    </center>
+                </label>
+            </form>
+
+            </div>
+          
+        </div>
+        <div class="modal login form" >
+            <h2><center> Login</center></h2>
+            <div class="cover ">
+                <form action="" method="get">
+                <label for="">
+                    <span>Email :</span><br>
+                    <input class="a"  type="email" onkeyup="handle(this,'email','email Id')"><br>
+                    <span id="email" class="red"></span>
+                </label><br>
+                <label for="">
+                    <span>Password :</span><br>
+                    <input class="a pass" type="password" id="pass" onclick="()=>{console.log('change')}" onkeyup="handle(this,'password','password')" ><br>
+                    <span id="password" class="red"></span>
+                </label><br>  
+                <label for="" style="margin:10px 0px ;">
+                    <input type="checkbox" onclick="handlePass()" ><span style="font-size: 18px; margin: 10px;">Show Password</span>
+                </label>
+                <label for="">
+                    <center>
+                        <button type="submit" style="margin: 30px;">Submit</button>
+                    </center>
+                </label>
+            </form>
+            </div>
+        </div>
+        <div class="web">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, cupiditate repellendus! Consectetur accusamus quos vero, expedita doloremque quia eos esse repellat inventore illo non illum optio iusto. Praesentium, incidunt. Fuga aliquid maxime facere quidem non veritatis atque doloremque magnam quis sed perferendis, quos maiores sit modi distinctio deserunt eos tempore temporibus aliquam in! Temporibus voluptatum quisquam voluptate officiis natus dicta dolor, quod nesciunt eius ut facere corrupti labore reiciendis pariatur fuga sunt deleniti similique minus ipsum mollitia. Voluptatibus facilis iure vero ullam incidunt, commodi, laudantium repudiandae corrupti maxime blanditiis alias? Sequi, nostrum nemo? Ex, eum mollitia? Delectus nisi magnam voluptates.
+    </div>
+
+    <script>
+        let login = document.getElementsByClassName("login")[0]
+        let ragi = document.getElementsByClassName("ragi")[0]
+
+        let loginBtn = document.getElementById("login")
+        let ragiBtn = document.getElementById("ragi")
+
+        loginBtn.addEventListener("click",()=>{
+            let loginTag = login.style.display
+            if(loginTag == "none" ){
+                ragi.style.display = "none"
+                login.style.display = "block";
+            }
+            else{
+                login.style.display = "none";
+            }
+        })
+
+        ragiBtn.addEventListener("click",()=>{
+            let ragiTag = ragi.style.display
+            if(ragiTag == "none"){
+                login.style.display = "none";
+                ragi.style.display = "block";
+            }
+            else{
+                ragi.style.display = "none";
+            }
+        })
+
+        function handle(tag,id,err) {
+            if(tag.value == ""){
+                document.getElementById(id).innerHTML = `*Please enter ${err} `;          
+            }else{
+                document.getElementById(id).innerHTML = "";          
+            }       
+        }
+        handleCon = (tag,id)=>{
+            let pass = document.getElementById("pass")
+                console.log(pass.value,tag.value)
+                if(tag.value != pass.value){
+                    document.getElementById(id).innerHTML = "Password dose not match";          
+                }
+                else{
+                    document.getElementById(id).innerHTML = "";          
+                }
+        }
+        handlePass = ()=>{
+            let pass =  document.querySelectorAll(".pass")
+            for (let i = 0; i <= 2; i++) {
+                if(pass[i].type === "password"){
+                    pass[i].type = "text"
+                }
+                else{
+                    pass[i].type = "password"
+                }
+            }
+        }
+    </script>
+</body>
+</html>

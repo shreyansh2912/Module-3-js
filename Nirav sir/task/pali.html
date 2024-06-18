@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text"id="num" >
+    <button onclick="handle()">Submit</button>
+
+    <script>
+
+        let num = document.getElementById("num");
+
+        function handle() {
+            let number = num.value
+            let len = number.length;
+            len--;
+            let ans = 0;
+            if(number.length != 0){
+                for (let i = 0; i < number.length; i++) {
+                    if(number[i] == number[len]){
+                        ans++;
+                    } 
+                    len--;           
+                }
+                if(ans == number.length){
+                    alert("It's Palindrome")
+                }else{
+                    alert("It's not Palindrome")
+
+                }
+            }else{
+                alert("Enter a Number")
+            }
+        }
+    </script>
+
+</body>
+</html>

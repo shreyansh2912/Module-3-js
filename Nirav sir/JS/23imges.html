@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img id="i1" src="" alt="" height="100px" width="100px">
+
+    <img id="i2" src="i1.jpg" alt="" height="100px" width="100px">
+
+    <img id="i3" src="i1.jpg" alt="" height="200px" width="100%">
+
+    <button id="b1" onclick="getImage()">Get </button>
+    <button id="b2" onclick=" ChangeImg()">Change</button>
+    <button id="b3" onclick="alternate()">Alternate</button>
+    
+    <script>
+        // const date123 = new Date();
+        // document.write(date123)
+
+        img1 = document.getElementById('i1');
+        img2 = document.getElementById('i2');
+        img3 = document.getElementById('i3');
+        
+        function getImage()
+        {
+            img1.src = 'i1.jpg'
+        }
+      
+
+        function ChangeImg()
+        {
+            img2.src = "i2.jpg"
+        }
+
+       function alternate()
+       {
+        // console.log(img3.src);//http://127.0.0.1:5500/i1.jpg
+            if( img3.src.match("i1.jpg"))
+            {
+                img3.src ="i2.jpg"
+            }
+            else if(img3.src.match("i2.jpg"))
+            {
+                img3.src ="i3.jpg"
+            }
+            else if(img3.src.match("i3.jpg"))
+            {
+                img3.src ="i4.jpg"
+            }
+            else if(img3.src.match("i4.jpg"))
+            {
+                img3.src ="i5.jpg"
+            }
+            else 
+            {
+                img3.src ="i1.jpg"
+            }
+
+            setTimeout("alternate()",1000)
+       }
+       
+       alternate()
+
+    //    setInterval(" alternate()",1000)
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wabPage">
+        <nav>
+            <h1>Music Player</h1>
+            <div class="in">
+                <input type="search" placeholder="Search" id="input">
+                <button onclick="handleSearch()">Search</button>
+            </div>
+            <ol>
+                <li>Home</li>
+                <li>Songs</li>
+                <li>Playlist</li>
+                <li>Contact Us</li>
+                <li>About Us</li>
+            </ol>
+        </nav>
+        <div class="web" id="panel">
+            <div class="panel">
+            </div>
+        </div>
+        <div class="bar">
+            <audio src="" id="audio" controls autoplay>Song</audio>
+            <div class="details" id="details">
+            </div>
+        </div>
+        <div class="cover">
+            <div class="pagi">
+                <button onclick="calc('decre')" id="decre" disabled><</button>
+                <div id="count"></div> 
+                <button onclick="calc('incre')" id="incre">></button>
+            </div>
+        </div>
+    </div>
+    <script>
+    let tag = document.getElementById("panel");
+    let dec = document.getElementById("decre");
+    let inc = document.getElementById("incre");
+    let datalen 
+    let decre = 1;
+    let incre = 10;
+    let pagi = document.getElementById("count")
+    function calc(ele) {
+        if(ele == "decre"){
+            decre = decre-10;
+            incre = incre-10;
+            inc.disabled = false
+            if(decre == 1) dec.disabled = true;
+            if(incre%10 != 0) {
+                let mod = incre%10;
+                incre = incre+10-mod;
+            }
+        }
+        else if(ele == "incre"){
+            decre = decre +10;
+            incre = incre +10;
+            dec.disabled = false;
+            if(incre >= datalen) inc.disabled = true; incre = datalen;
+        }
+        fetch("data.json")
+        .then((res)=>{ return res.json()})
+        .then((data)=>{
+        let song = ""; 
+            datalen = data.length;
+            d = decre-1; l = incre-1;
+            console.log(d,l)
+            for (let i = d; i <= l; i++) {   
+                song +=`<div class="song panel">
+                    Song : ${data[i].title}
+                    <button onclick="handle(this,'${data[i].src}','${data[i].title}')">Play</button> 
+                </div>`
+            }
+        pagi.innerHTML=`${decre} To ${incre}`
+        tag.innerHTML = song;
+        song = "";
+    })
+}
+
+// call()
+calc("hello")
+
+    </script>
+</body>
+</html>

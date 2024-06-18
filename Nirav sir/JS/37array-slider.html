@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img src="i1.jpg" alt="" height="200px" width="100%">
+    <img src="i2.jpg" alt="" height="200px" width="100%">
+    <img src="i3.jpg" alt="" height="200px" width="100%">
+    <img src="i4.jpg" alt="" height="200px" width="100%">
+
+    <script>
+index =0;
+      function slider()
+      {
+        
+        
+        img_arr = document.getElementsByTagName('img');
+        // document.write(img_arr.length)
+        // console.log(img_arr[3])
+
+        for(let i=0;i<img_arr.length;i++)
+        {
+            img_arr[i].style.display = "none"
+        }
+
+        // console.log(i)
+        img_arr[index].style.display = "block"
+        index++;//4
+        if(index==4)
+        {
+            index=0
+        }
+
+        setTimeout("slider()",1000)
+      }
+
+      slider()
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

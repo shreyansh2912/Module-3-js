@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    tbody tr{
+        height: 100px;
+    }
+    button{
+        color: aliceblue;
+        height: 40px;
+        margin: 20px;
+        width: 100px;
+        border-radius: 10px;
+    }
+    .r-btn{
+        background-color: red;
+    }
+    table{
+        margin: 1px auto;
+    }
+    .add{
+        padding:10px 0px 0px 380px;
+    }   
+    .a-btn{
+        background-color: green;
+    }
+</style>
+<body>
+    <div class="wrap">
+        <div class="add" >
+            <a href="../Billing/add.html">
+                <button class="a-btn"> Add</button> 
+            </a>
+        </div>
+        <table border="1">
+            <thead>
+                <th>Product Info</th>
+                <th>Image</th>
+                <th>Quantity</th>
+                <th>Price (Per Unit)</th>
+                <th>Price (Subtotal)</th>
+                <th>Actions</th>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td></td>
+                    <td></td>
+                    <td id="total"></td>
+                    <td></td>
+                </tr>
+            </tfoot >
+        </table>  
+        
+        </div>
+        <script>
+        var shaw = "<tr>";
+        let num = 0;
+        const a =  document.getElementById("tbody") ;
+        fetch("../Billing/data.json")
+        .then((res)=>{return res.json()})
+        .then((data)=>{
+            data.forEach(element => {
+                console.log(element)
+                subTotal = element.quantity * element.price ;
+                 num = num + subTotal;
+                shaw += `
+                    <td>
+                        ${element.Name}<br/>
+                    </td>
+                    <td>
+                            <img src="img/${element.img}" width=100px;  />
+                    </td>
+                    <td>${element.quantity}</td>
+                    <td>${element.price}</td>
+                    <td id="subTotal">${subTotal}</td>
+                    <td>
+                        <Button class="r-btn">Remove</Button>
+                    </td>
+                </tr>`
+             a.innerHTML = shaw;
+            });
+            document.getElementById("total").innerHTML = num;
+        })
+
+    </script>
+</body>
+</html>

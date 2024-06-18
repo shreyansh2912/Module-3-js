@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        class Test
+        {
+             x=12;
+             y="hi";
+             z=[2,3,4];
+        }
+
+        const obj = new Test;
+        const obj1 = new Test;
+        console.log(obj.x);
+        console.log(obj.y);
+        console.log(obj.z);
+        console.log(obj1.z);
+
+        class Test1 
+        {
+            a = function fun1()
+            {
+                let x=12
+                console.log('Fun1'+x)
+            }
+
+            b = function (y)
+            {
+                console.log('Anonymous'+y)
+            }
+
+           c= ()=>
+            {
+                console.log('Arrow')
+            }
+
+            fun2()
+            {
+                console.log('Fun2')
+            }
+
+            static t()
+            {
+                console.log('static')
+            }
+        }
+
+        const object1 = new Test1;
+
+        object1.a();
+        object1.b(123);
+        object1.c();
+        object1.fun2();
+        Test1.t();
+       
+        
+
+
+    </script>
+    
+</body>
+</html>

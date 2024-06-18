@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .page{
+        padding:20% 35%;
+        background-color: blueviolet;
+    }
+    input , select , button{
+        height: 30px;
+        width: 200px;
+        margin-top:20px ;
+        border-radius: 12px;
+        padding-left: 5px;
+    }
+    .output{
+        margin-top: 20px;
+    }
+    .box{
+        width: 400px;
+        background-color:palevioletred;
+        border-radius: 20px;
+        padding: 25px;
+        border: 4px solid rgb(232, 233, 234);
+        text-align: center;
+        text-transform:uppercase;
+    }
+    .title{
+        font-size: 25px;
+        font-style: oblique;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color:aliceblue;
+        color:fuchsia;
+        border-radius: 12px;
+    }
+</style>
+<body>
+    <div class="page">
+        <div class="box">
+            <div class="title">
+                Currency Converter
+            </div>
+            <input type="number" id="ind">
+            <select name="" id="exchange">
+                <option value="" hidden> Select country </option>
+                <option value="0.012">Us Dollar (USD)</option>
+                <option value="0.087">China (yuan)</option>
+                <option value="1.13">Rusia (Ruble)</option>
+                <option value="1.85">Japan (JPY)</option>
+                <option value="0.011">Euro (EUR)</option>
+            </select>
+            <button id="#sub" onclick="convert()">Submit</button>
+            <div class="output"></div>
+        </div>
+    </div>
+    <script>
+        function convert(params) {   
+            let ind = document.getElementById("ind")
+            let exchange = document.getElementById("exchange")
+            if (ind.value == "" || exchange.value == "") {
+                alert("Please fill all fields")
+            }
+            document.querySelector(".output").innerText = ind.value * exchange.value;
+        }
+    </script>
+</body>
+</html>

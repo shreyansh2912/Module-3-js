@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form{
+            display: flex;
+            flex-direction: column;
+            width:300px;
+            margin: 50px auto;
+        }
+        span{
+            margin: 10px 5px;
+        }
+        button{
+            background-color:rgb(5, 152, 210);
+            color: aliceblue;
+            height: 30px;
+            margin: auto;
+            width: 100px
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <a href="./index.html">
+            <button>Home</button>
+        </a>
+    </div>
+    <div class="form">
+        <span>Product Name :-</span>
+        <input type="text" id="name" name="name">
+        <span>Quantity :-</span>
+        <input type="text" id="quantity" name="quantity">
+        <span>Price :-</span>
+        <input type="text" id="price" name="price"><br>
+        <button onclick="cli()">Submit</button>
+    </div>
+
+    <script>
+        function cli(){
+            let name = document.getElementById("name").value
+            let quantity = document.getElementById("quantity").value
+            let price = document.getElementById("price").value
+            let addData = {};
+            addData = {name,quantity,price}
+            // console.log(addData);
+            fetch(`./data.json`,{
+                method:"post",
+                header:{"content-type":"application/json"},
+                body:JSON.stringify(addData)
+            })
+            .then((res)=>{
+                if(res){
+                    alert("Data Added !")
+                }
+            })
+            
+        }
+    </script>
+</body>
+</html>
